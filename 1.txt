@@ -1,0 +1,127 @@
+1:
+#include <iostream>
+
+using namespace std;
+double WeightedAverage(double nums[],double weights[], int size);
+int main()
+{
+    double nums[4]={4,2,6,19};
+    double weights[4]={0.3,0.3,0.2,0.8};
+    cout << "Avarage  = " << WeightedAverage(nums,weights,4) << endl;
+	delete[] weights;
+	delete[] nums;
+    return 0;
+}
+double WeightedAverage(double nums[],double weights[], int size)
+{
+    double totalWeight=0;
+    double sum=0;
+    for(int i=0;i<size;i++)
+    {
+        sum+=nums[i]*weights[i];
+        totalWeight+=weights[i];
+    }
+    return sum/totalWeight;
+}
+2:
+#include <iostream>
+
+using namespace std;
+
+bool IsArithmeticProgression(int *nums, int size = 3);
+bool IsArithmeticProgression(char *chars, int size=3);
+int main() {
+    char chars[4] = {'v', 'b','c','d'};
+    if(IsArithmeticProgression(chars,4))
+        cout << "Is Arithmetic Progression"  << endl;
+    else
+        cout << "Is Not Arithmetic Progression"  << endl;
+	delete[] chars;
+    return 0;
+}
+
+bool IsArithmeticProgression(int *nums, int size) {
+    int d = *(nums + 1) - *nums;
+    for (int i = 0; i < size - 1; i++) {
+        if (*(nums + i + 1) - *(nums + i) != d) {
+            return false;
+        }
+    }
+    return true;
+}
+bool IsArithmeticProgression(char *chars, int size) {
+    int d = *(chars + 1) - *chars;
+    for (int i = 0; i < size - 1; i++) {
+        if (*(chars + i + 1) - *(chars + i) != d) {
+            return false;
+        }
+    }
+    return true;
+}
+3:
+#include <iostream>
+
+using namespace std;
+
+string* NewArray(string sent, int *size);
+string stringstring(string str);
+int main() {
+    int size;
+    string sentance="hello world";
+    string* words = NewArray(sentance, &size);
+    for(int i=0;i<size;i++)
+    {
+        words[i]=stringstring(words[i]);
+        cout<<words[i]<<","<<endl;
+    }
+    delete[] words;
+}
+string stringstring(string str)
+{
+    int length=0;
+    char *p=&str[0];
+    while(*p!=NULL)
+    {
+        length++;
+        p++;
+    }
+    p=&str[0];
+    char *newStr=new char[length*2];
+    for(int i=0;i<length; i++)
+    {
+       newStr[i]=*p;
+       newStr[i+length]=*p;
+       p++;
+    }
+    str=newStr;
+    return str;
+    
+    
+}
+string* NewArray(string sentance, int *size)
+{
+    int count=1;
+    char *p=&sentance[0];
+    while(*p!=NULL)
+    {
+        if(*p==' ')
+            count++;
+        p++;
+    }
+    string* words = new string[count];
+    p=&sentance[0];
+    for(int i=0; i<count;i++)
+    {
+        string word="";
+        while(*p!=' ')
+        {
+            word+=*p;
+            p++;
+        }
+        words[i]=word;
+        p++;
+    }
+    *size=count;
+    return &words[0];
+    
+} 
