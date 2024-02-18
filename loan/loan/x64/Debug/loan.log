@@ -1,0 +1,4 @@
+﻿exc.obj : error LNK2019: unresolved external symbol "public: __cdecl Loan::Loan(char *)" (??0Loan@@QEAA@PEAD@Z) referenced in function main
+exc.obj : error LNK2019: unresolved external symbol "public: __cdecl Loan::~Loan(void)" (??1Loan@@QEAA@XZ) referenced in function main
+exc.obj : error LNK2019: unresolved external symbol "public: void __cdecl Loan::display(void)const " (?display@Loan@@QEBAXXZ) referenced in function main
+C:\Users\Itay\OneDrive\מסמכים\מכללה\יד\cpp\loan\x64\Debug\loan.exe : fatal error LNK1120: 3 unresolved externals
