@@ -1,0 +1,21 @@
+﻿  HW7.cpp
+C:\Users\Itay\OneDrive\מסמכים\מכללה\יד\cpp\HW7\HW7\HW7.cpp(60,1): error C3867: 'std::vector<int,std::allocator<int>>::begin': non-standard syntax; use '&' to create a pointer to member
+C:\Users\Itay\OneDrive\מסמכים\מכללה\יד\cpp\HW7\HW7\HW7.cpp(94,5): message : see reference to function template instantiation 'void WriteToFile<int>(std::vector<int,std::allocator<int>> *,std::string)' being compiled
+C:\Users\Itay\OneDrive\מסמכים\מכללה\יד\cpp\HW7\HW7\HW7.cpp(63,9): error C2679: binary '=': no operator found which takes a right-hand operand of type 'overloaded-function' (or there is no acceptable conversion)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vector(344,1): message : could be 'std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>> &std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>::operator =(std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>> &&)'
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vector(344,1): message : or       'std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>> &std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>::operator =(const std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>> &)'
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\Itay\OneDrive\מסמכים\מכללה\יד\cpp\HW7\HW7\HW7.cpp(63,9): message : while trying to match the argument list '(std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>, overloaded-function)'
+          with
+          [
+              _Ty=int
+          ]
+  Point.cpp
+  Generating Code...
